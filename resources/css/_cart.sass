@@ -1,0 +1,233 @@
+.cart
+
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: $section-spacing
+
+        & .main__title-container
+            margin-bottom: 0 !important
+
+            & svg
+
+                & path
+                    stroke: $green
+
+    &__content
+        display: grid
+        grid-template-columns: 2fr 1fr
+        gap: 2rem
+
+        @media only screen and (max-width: 1150px)
+            grid-template-columns: 1fr
+
+            &__total
+                margin-left: auto
+                min-width: 40rem
+
+        @include respond-to('medium-header')
+            grid-template-columns: 1fr
+
+        &__empty
+
+            & .section__title
+                margin-bottom: 6rem
+
+        &__list
+            display: grid
+            grid-template-columns: 1fr
+            gap: 2rem
+
+.cart-card
+    display: grid
+    grid-template-columns: 1fr 1fr
+    column-gap: 2rem
+    font-size: $s-28
+
+    &__image
+        max-width: 20rem
+        max-height: 11.3rem
+        overflow: hidden
+        border-radius: $border-radius-big
+        border: $card-border
+
+        & img
+            height: 100%
+            width: 100%
+            object-fit: cover
+
+    &__infos
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        margin-top: 2rem
+
+        &__variant,
+        &__seller,
+        &__address
+            font-size: $s-24
+            margin-top: 1rem
+
+        & select
+            min-height: 5rem
+            border: 2px solid $green
+            border-radius: $border-radius-big
+            font-family: $font
+            font-size: 1.6rem
+            text-indent: 1rem
+            background-color: transparent
+            padding-right: 1rem
+            max-width: 20rem
+            margin-top: 1rem
+
+    &__price
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        flex: 1
+        margin-left: 2rem
+        padding-left: 2rem
+        border-left: $card-border
+
+        &__per-unit,
+        &__sub-title,
+        &__actions
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            white-space: nowrap
+
+            &__count
+                display: flex
+                align-items: center
+                border: $input-border
+                border-radius: $border-radius-small
+                padding: 1rem
+
+                & span
+                    font-size: 2.4rem
+                    margin-right: 1rem
+
+                & select
+                    font-size: 2.4rem
+                    font-family: $font
+                    height: 3.2rem
+                    background-color: none
+                    border: none
+                    border-bottom: $card-border
+                    cursor: pointer
+
+        &__header
+
+            &__delivery
+                font-size: $s-24 !important
+
+    @include respond-to('medium')
+        grid-template-columns: 1fr
+        max-width: 100%
+
+        &__price
+            margin: 2rem 2rem 0 0
+            padding: 2rem 0 0
+            border-left: none
+            border-top: $card-border
+
+.after-checkout
+
+    &__header
+        margin-top: 8rem
+
+.checkout
+
+    &__header
+        margin-top: 8rem
+
+    &__delivery
+
+        &__description
+            margin-top: 4rem
+            font-size: 2rem
+            line-height: 1.25
+
+    &__stripe
+        display: grid
+        align-items: flex-start
+        grid-template-columns: 1fr 1fr
+        gap: 2rem
+
+        @include respond-to('medium-plus')
+            display: grid
+            align-items: flex-start
+            grid-template-columns: 1fr
+
+        & .button
+            margin-top: 2rem
+            display: block
+            min-width: 100%
+
+        &__resume
+            margin-bottom: $content-spacing
+
+            &__table
+                font-size: 2rem
+                border-bottom: $card-border
+                padding-bottom: 1rem
+
+                &__title
+                    font-size: 4rem
+                    margin-bottom: 4rem
+
+                &__top
+                    display: grid
+                    grid-template-columns: 3fr 1fr 1fr 1fr
+                    gap: 1rem
+                    margin-bottom: 1rem
+                    border-bottom: $card-border
+                    padding-bottom: 1rem
+
+                    &__quantity,
+                    &__unit
+                        text-align: center
+
+                    &__total
+                        text-align: right
+
+                &__list
+                    display: grid
+                    grid-template-columns: 1fr
+                    gap: 2rem
+
+                    &__item
+                        display: grid
+                        align-items: center
+                        grid-template-columns: 3fr 1fr 1fr 1fr
+                        gap: 1rem
+
+                        &:not(:last-of-type)
+                            border-bottom: $card-border-opacity
+                            padding-bottom: 1rem
+
+                        &__quantity,
+                        &__unit
+                            text-align: center
+
+                        &__total
+                            text-align: right
+
+            &__price
+                margin-top: 4rem
+                display: flex
+                justify-content: space-between
+
+                &__title
+                    font-size: 3.2rem
+
+                &__amount
+                    font-size: 3.2rem
+
+strong
+    font-variation-settings: $font-w-700
+
+.status-message
+    margin-bottom: $subTitle-spacing

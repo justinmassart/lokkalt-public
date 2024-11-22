@@ -1,0 +1,38 @@
+.support
+
+    &__error
+        font-size: 2.8rem
+        color: $danger
+        margin-bottom: 4rem
+
+    &__success
+        font-size: 2.8rem
+        color: $green
+        margin-bottom: 4rem
+
+    & .form
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 2rem
+
+        @include respond-to('small-large')
+            grid-template-columns: 1fr
+
+        & input,
+        & select
+            min-width: 100%
+
+        & .form__field:has(> textarea)
+            grid-column: 1 / -1
+
+            & textarea
+                line-height: 1.25
+                text-indent: 1rem
+                min-height: 15rem
+                max-height: 20rem
+
+        & button
+            grid-column: 2
+
+            @include respond-to('small-large')
+                grid-column: 1

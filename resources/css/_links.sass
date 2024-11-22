@@ -1,0 +1,78 @@
+.card-link
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    font-size: 0 !important
+    color: transparent !important
+    z-index: 10
+
+.link
+    display: inline-block
+    text-decoration: none
+    color: $green-dark
+
+.link-ns
+    display: inline-block
+    text-decoration: none
+    color: $green-dark
+    font-size: 1.6rem
+
+.link-white
+    display: inline-block
+    text-decoration: none
+    color: $white
+
+.link-danger
+    display: inline-block
+    text-decoration: none
+    color: $danger
+
+.link::after
+    content: ''
+    display: block
+    width: 0
+    height: 1px
+    background: $green-dark
+    transition: width .25s
+    border-radius: $border-radius-small
+
+.link-white::after
+    content: ''
+    display: block
+    width: 0
+    height: 1px
+    background: $white
+    transition: width .25s
+    border-radius: $border-radius-small
+
+.link-danger::after
+    content: ''
+    display: block
+    width: 0
+    height: 1px
+    background: $danger
+    transition: width .25s
+    border-radius: $border-radius-small
+
+.link:hover::after
+    width: 100%
+
+.link-white:hover::after
+    width: 100%
+
+.link-danger:hover::after
+    width: 100%
+
+.link-active
+    font-variation-settings: $font-w-600
+
+    &::after
+        content: ''
+        display: block
+        width: 100%
+        height: 1px
+        background: $green-dark
+        transition: width .25s
+        border-radius: $border-radius-small

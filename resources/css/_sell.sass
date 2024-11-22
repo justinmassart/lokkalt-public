@@ -1,0 +1,31 @@
+.sell
+
+    &__shop__description
+        font-size: 2rem
+
+    &__advices
+        font-size: 2rem
+        margin-bottom: 2rem
+
+    & .form
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr))
+        gap: 4rem
+        align-items: flex-start
+
+        &__description
+            grid-column: 1 / -1
+
+        &__field
+            margin-bottom: 0
+
+            &__input
+                min-width: 100%
+
+        &__actions
+            grid-column: 1 / -1
+            display: flex
+            justify-content: space-between
+
+            & button:last-of-type
+                margin-left: auto

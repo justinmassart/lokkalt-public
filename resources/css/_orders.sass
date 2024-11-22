@@ -1,0 +1,123 @@
+.orders
+
+    &__list
+        display: grid
+        gap: 2rem
+
+        &__item
+
+            &__header
+                font-size: 2.8rem
+                display: grid
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+                justify-items: center
+                align-items: center
+                gap: 2rem
+                cursor: pointer
+
+                @include respond-to('medium')
+                    grid-template-columns: 1fr 1fr
+
+                &__ref
+                    font-size: 2rem
+
+                &__action
+                    display: flex
+                    cursor: pointer
+                    max-width: max-content
+                    justify-self: flex-end
+
+                    & p
+                        margin-right: 1rem
+                        margin-left: auto
+
+            &__content
+                margin-top: 1rem
+                padding-top: 1rem
+                border-top: $card-border
+                display: grid
+
+                &__article
+                    display: grid
+                    grid-template-columns: minmax(10rem, 20rem) 1fr 1fr 1fr
+                    align-items: center
+                    gap: 2rem
+                    font-size: 2rem
+
+                    @include respond-to('medium-plus')
+                        grid-template-columns: minmax(10rem, 20rem) 1fr 1fr 1fr
+
+                    &:not(:last-of-type)
+                        margin-bottom: 1rem
+                        padding-bottom: 1rem
+                        border-bottom: $card-border-opacity
+
+                    &__image
+                        align-self: stretch
+                        border: $card-border
+                        border-radius: $border-radius-big
+                        overflow: hidden
+                        min-width: 10rem
+                        max-width: 20rem
+
+                        & img
+                            object-fit: cover
+                            min-width: 100%
+                            min-height: 100%
+
+                    &__infos
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-between
+                        min-height: 50%
+
+                    &__shop
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-between
+                        min-height: 50%
+
+                    &__details
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-between
+                        min-height: 50%
+
+                        & p:not(:last-of-type)
+                            margin-bottom: 1rem
+
+                &__resume
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                    gap: 2rem
+                    font-size: 2rem
+
+                    &__invoice
+                        grid-column: span 2
+
+                        &__title
+                            margin-bottom: 1rem
+
+                        & button
+                            max-width: 20rem
+
+                    &__delivery
+
+                        &__title
+                            margin-bottom: 1rem
+
+                    &__total
+
+                        & p:nth-of-type(2)
+                            margin: 1rem 0
+
+            @include respond-to('medium-header')
+
+                &__header
+                    &__action
+                        justify-self: flex-start
+
+                &__content
+
+                    &__article
+                        grid-template-columns: 1fr 1fr

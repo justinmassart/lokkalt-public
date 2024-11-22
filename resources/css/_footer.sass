@@ -1,0 +1,74 @@
+.footer
+    margin-top: auto
+
+    &__go-back-up
+        background-color: $green-secondary
+        transition: all ease-in-out .25s
+
+        &__link
+            color: $white
+            font-size: 2rem
+            padding: 1rem 0
+            display: inline-block
+            min-width: 100%
+            text-align: center
+            text-decoration: none
+            vertical-align: baseline
+
+    &__go-back-up:hover
+        background-color: $green-dark
+
+    &__nav
+        background-color: $green
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        flex-wrap: wrap
+        padding: 5rem 3rem
+        font-size: 2.4rem
+        color: $white
+
+        &__logo,
+        & ul,
+        &__newsletter
+            margin: 0 2rem
+
+        &__logo
+            position: relative
+
+        & ul li
+            margin-top: 1rem
+
+        & ul::before
+            content: attr(aria-label)
+            text-decoration: underline
+
+        &__newsletter
+
+            &__title
+                text-decoration: underline
+                margin-bottom: 1rem
+
+            &__form
+
+                &__field
+                    margin-bottom: 2rem !important
+
+                    &__label
+                        font-size: 1.8rem !important
+
+    &__mentions
+        background-color: $green-secondary
+        color: $white
+
+        &__list
+            margin: 0 auto
+            display: flex
+            justify-content: center
+            padding: 2rem 1rem
+            max-width: 75%
+            font-size: 1.6rem
+
+            & li:not(:last-of-type)::after
+                content: '•'
+                margin: 0 1rem

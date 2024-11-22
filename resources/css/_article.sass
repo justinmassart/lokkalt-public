@@ -1,0 +1,300 @@
+.article
+
+    &__top
+
+        &__infos
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: flex-start
+            align-self: stretch
+            flex-grow: 1
+            max-width: 73rem
+
+            &__header
+                min-width: 100%
+                padding-bottom: 2rem
+                border-bottom: $card-border
+                margin-bottom: 2rem
+
+                &__title
+                    font-size: 6rem
+                    color: $green
+                    font-variation-settings: 'wght' 600
+                    margin-bottom: 2rem
+
+                    &__variant
+                        font-size: 3.2rem
+                        display: block
+                        margin-top: 1rem
+
+                &__score-favourite
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+
+                    @include respond-to('medium')
+                        flex-direction: column
+                        align-items: flex-start
+
+                        &__score
+                            margin-bottom: 2rem
+
+                    &__score
+                        display: flex
+                        align-items: center
+                        font-size: 2.8rem
+                        color: $green
+                        margin-right: 2rem
+
+            &__price
+                min-width: 100%
+                display: flex
+                align-items: center
+                justify-content: space-between
+                padding-bottom: 2rem
+                border-bottom: $card-border
+                margin-bottom: 2rem
+
+                @include respond-to('medium')
+                    flex-direction: column
+                    align-items: flex-start
+
+                    & .asset-btn
+                        margin-top: 2rem
+                        line-height: 1
+
+                &__value
+                    font-size: 6rem
+                    font-variation-settings: 'wght' 600
+                    margin-right: 2rem
+                    white-space: nowrap
+
+                &__unit
+                    font-size: 3.2rem
+                    margin-left: 1rem
+                    max-height: 3.2rem
+
+            &__variants
+                min-width: 100%
+                padding-bottom: 2rem
+                border-bottom: $card-border
+                margin-bottom: 2rem
+
+                &__title
+                    font-size: 4rem
+                    font-variation-settings: 'wght' 600
+                    margin-bottom: 4rem
+
+                &__list
+                    min-width: 100%
+                    display: grid
+                    gap: 2rem
+                    grid-template-columns: repeat(auto-fit, minmax(5rem, 10.2rem))
+
+            &__actions
+                min-width: 100%
+
+                & .button-count
+                    margin-bottom: 4rem
+
+                &__btns
+                    display: grid
+                    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+                    gap: 2rem
+
+                    & button:first-of-type
+                        margin-top: 0
+
+    &__tabs
+
+        &__header
+            display: flex
+            transform: translateX(-1rem)
+
+            &__separator
+                width: .3rem
+                height: 3.5rem
+                border-radius: .5rem
+                background-color: $green-dark
+                margin: 0 1rem
+                opacity: .5
+                transform: translateY(1rem)
+
+            @include respond-to('medium')
+                flex-direction: column
+
+                &__separator
+                    width: 10rem
+                    height: .3rem
+                    margin: 1rem 0
+                    transform: translateX(1rem)
+
+            &__link
+                cursor: pointer
+
+                & .link
+                    transition: opacity .3s ease-in-out
+                    padding: 1rem
+
+                    &:not(.active)
+                        opacity: .5
+
+                    &:hover
+                        opacity: 1
+
+        &__sub-title
+            font-size: 3.2rem
+            margin: 5rem 0 4rem
+
+        &__details
+            display: grid
+            gap: 2rem
+            grid-template-columns: 1fr !important
+
+            @include respond-to('extra')
+                grid-template-columns: repeat(2, minmax(38.5rem, 1fr)) !important
+
+            &__description
+                grid-column: 1 / -1
+                max-width: calc(100% - 2rem)
+
+                & p
+                    font-size: $s-28
+
+            &__article-details
+                margin-top: 6rem
+
+            & .article-details-card
+                max-width: calc(100% - 2rem)
+
+            &__article-seller
+                margin-top: 6rem
+
+            & .shop-card
+                max-width: calc(100% - 2rem)
+
+        &__appreciations
+            display: grid
+            gap: 2rem
+            grid-template-columns: minmax(20rem, 1fr) !important
+
+            @include respond-to('large-plus')
+                grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)) !important
+
+            &__comments
+                max-width: 100%
+
+                &__header
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+
+                    &__filters
+                        display: flex
+                        align-items: flex-end
+
+                        &__form
+
+                            & select
+                                min-width: 15rem
+                                min-height: 5rem
+                                border: 2px solid $green
+                                border-radius: $border-radius-big
+                                font-family: $font
+                                font-size: 1.6rem
+                                text-indent: 1rem
+                                background-color: transparent
+
+                        & button:last-of-type
+                            margin-left: 2rem
+
+                            @include respond-to('small')
+                                margin-right: 2rem
+
+                    @include respond-to('small')
+                        flex-direction: column
+                        align-items: flex-start
+
+                        & .article__tabs__sub-title
+                            margin-bottom: 2rem !important
+
+                        &__filters
+                            margin-bottom: 2rem
+
+                &__add
+                    margin-bottom: 4rem
+
+                &__list
+                    display: grid
+                    gap: 2rem
+
+                &__load-more
+                    margin-top: 4rem
+                    text-align: center
+
+        &__questions
+
+            &__header
+                display: flex
+                justify-content: space-between
+                align-items: center
+
+                & h4
+                    margin-right: 2rem
+
+                @include respond-to('small')
+                    flex-direction: column
+                    align-items: flex-start
+
+                    & button
+                        margin-bottom: 4rem
+
+            &__list
+                display: grid
+                grid-template-columns: 1fr 1fr
+                gap: 2rem
+                align-items: start
+
+                @include respond-to('medium')
+                    grid-template-columns: 1fr
+
+                &__left,
+                &__right
+                    display: grid
+                    gap: 2rem
+
+            & .question-sent
+                margin-top: 4rem
+                font-size: 2.4rem
+                color: $green
+                font-variation-settings: $font-w-600
+
+            & .form
+                margin-top: 4rem
+
+                & button
+                    display: block
+                    margin-left: auto
+
+    & .section__sub-title
+        font-size: 4rem
+
+.merchant-other-products,
+.similar-products
+
+    &__title
+        font-size: 4rem
+        margin-bottom: 4rem
+
+    &__list
+        display: grid
+        gap: 2rem
+        grid-template-columns: repeat(auto-fill, minmax(32rem, auto))
+
+.articles
+
+    &__list
+        display: grid
+        gap: 2rem
+        grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr))

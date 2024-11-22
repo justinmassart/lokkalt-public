@@ -1,0 +1,24 @@
+.notifications
+
+    &__content
+
+        &__filters
+            margin-bottom: 4rem
+            text-align: right
+
+            & .button:last-child
+                margin-left: 2rem
+
+        &__list
+            display: grid
+            grid-template-columns: 1fr 1fr
+            align-items: flex-start
+            gap: 2rem
+
+            &__left,
+            &__right
+                display: grid
+                gap: 2rem
+
+            @include respond-to('medium')
+                grid-template-columns: 1fr

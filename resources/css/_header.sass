@@ -1,0 +1,453 @@
+.header
+    background-color: $white
+    box-shadow: $shadow
+    position: relative
+
+    svg
+        cursor: pointer
+
+    &__top
+        margin: 0 auto
+        max-width: 192rem
+        max-height: 5rem
+        padding: 3rem 5rem
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: $card-border
+
+        &__logo
+            max-width: 18.2rem
+            max-height: 5rem
+            position: relative
+
+            & svg
+                min-width: 100%
+                min-height: 100%
+
+                & path
+                    stroke: none
+                    fill: $green
+
+        &__burger
+            display: none
+            cursor: pointer
+
+            @include respond-to(medium-header)
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: space-between
+                width: 5rem
+                height: 2.5rem
+                padding: 2rem 0
+
+            &__item
+                transition: all ease-in-out .25s
+                min-height: .65rem
+                min-width: 100%
+                background-color: $green
+                border-radius: $border-radius-small
+
+        &__burger.open
+            .header__top__burger__item:first-of-type
+                transform-origin: top center
+                transform: translate(0, 1rem) rotate(-45deg)
+
+            .header__top__burger__item:last-of-type
+                transform-origin: bottom center
+                transform: translate(0, -1rem) rotate(45deg)
+
+        &__menu
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: all ease-in-out .5s
+            z-index: 1
+
+            @include respond-to(medium-header)
+                transform-origin: bottom left
+                flex-direction: column
+                min-height: 30rem
+                position: absolute
+                top: -47.3rem
+                left: 0
+                right: 0
+                background-color: $white
+                border-bottom: $card-border
+
+                & > *
+                    margin: 0 0 4rem !important
+
+                &__locale
+                    margin-top: 4rem !important
+
+            &__locale
+                display: flex
+                align-items: center
+                justify-content: center
+                max-height: 3.5rem
+                max-width: 5rem
+                position: relative
+                z-index: 200
+                margin-right: 2rem
+
+                svg
+                    border: $card-border
+                    border-radius: $border-radius-small
+                    min-width: 5rem
+                    min-height: 5rem
+                    max-width: 5rem
+                    max-height: 5rem
+
+                    path
+                        stroke: none
+
+                &__container
+                    position: absolute
+                    z-index: 100
+                    top: 150%
+                    left: -150%
+                    right: 150%
+                    min-width: 20rem
+                    font-size: 2rem
+
+                    &__langs-list
+                        margin-bottom: 1rem
+                        padding-bottom: 1rem
+                        border-bottom: $card-border
+                        display: flex
+                        justify-content: space-between
+
+                    &__countries-list
+
+                        &__item:not(:last-of-type)
+                            margin-bottom: 2rem
+
+            &__search
+                min-width: 25rem
+
+                & .search__link
+                    text-decoration: none
+                    color: $green-dark
+
+                &__results
+                    margin-top: 2rem
+                    position: absolute
+                    right: 5rem
+                    background-color: $white
+                    border: $card-border
+                    border-radius: $border-radius-big
+                    display: flex
+                    flex-wrap: wrap
+                    max-width: 80vw
+                    z-index: 100
+
+                    &__title
+                        font-size: 2rem
+                        padding: 2rem 0 2rem 2rem
+
+                        &:last-of-type
+                            padding-right: 2rem
+
+                    &__list
+                        margin: 1rem
+                        font-size: 1.6rem
+                        max-height: 40rem
+                        overflow-y: scroll
+
+                        &__item
+                            margin: 0.5rem 0
+                            padding: 0.5rem
+                            background-color: $white
+                            border-radius: $border-radius-small
+                            transition: background-color ease-in-out .1s
+                            position: relative
+
+                            &:hover
+                                background-color: $green-lighter
+
+                            &__content
+                                display: grid
+                                grid-template-columns: 10rem minmax(20rem, 1fr)
+                                gap: 2rem
+                                align-items: flex-start
+
+                                &__image
+                                    min-width: 10rem
+                                    min-height: 10rem
+                                    overflow: hidden
+                                    border: $card-border
+                                    border-radius: $border-radius-small
+                                    position: relative
+
+                                    & img
+                                        object-fit: cover
+                                        position: absolute
+                                        left: 50%
+                                        top: 50%
+                                        transform: translate(-50%, -50%)
+
+                                &__infos
+                                    display: flex
+                                    flex-direction: column
+                                    min-height: 100%
+
+                                    &__primary
+                                        display: flex
+                                        flex-direction: column
+
+                                    &__secondary
+                                        margin-top: 1rem
+                                        display: flex
+                                        flex-direction: column
+
+                            & a
+                                display: block
+
+            &__profile
+                display: flex
+                align-items: center
+
+                & svg
+                    path
+                        transition: all ease-in-out .25s
+                        stroke: #0D1C15BF
+
+                & svg:hover
+                    path
+                        stroke: $green-dark
+
+                &__cart,
+                &__notification,
+                &__avatar
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    min-height: 5rem
+                    min-width: 5rem
+                    position: relative
+                    margin: 0 2rem
+
+                    & .notification-number
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        position: absolute
+                        top: -0.5rem
+                        right: -1rem
+                        min-width: 2.5rem
+                        min-height: 2.5rem
+                        border-radius: $border-radius-small
+                        background-color: $green
+                        color: $white
+                        font-size: 1.6rem
+
+                &__avatar
+                    position: relative
+                    margin-right: 0
+
+                    & svg path
+                        fill: none
+
+                    &__dropdown
+                        padding: 2rem
+                        display: flex
+                        flex-direction: column
+                        align-items: flex-start
+                        justify-content: space-between
+                        background-color: $white
+                        border: $card-border
+                        border-radius: $border-radius-big
+                        box-shadow: $shadow
+                        font-size: 2rem
+                        position: absolute
+                        top: calc( 100% + 2rem )
+                        right: -9999rem
+                        opacity: 0
+                        z-index: 2
+
+                        ul
+                            display: flex
+                            flex-direction: column
+
+                            li
+                                white-space: nowrap
+                                margin-bottom: 2rem
+
+                                &:last-of-type
+                                    margin-bottom: 0
+
+                    &__dropdown.open
+                        animation: slideIn-dropdown .3s forwards
+
+                    &__dropdown.closed
+                        animation: slideOut-dropdown .3s forwards
+
+                    & form
+                        margin-top: 2rem
+
+                & svg
+                    max-width: 5rem
+                    max-height: 5rem
+
+            & input
+                max-width: 25rem
+                min-height: 5rem
+
+            & svg
+                min-height: 100%
+
+            & > *
+                margin-left: 2rem
+
+        &__menu.open
+            animation: slideIn-categories .3s forwards
+
+        &__menu.closed
+            animation: slideOut-categories .3s forwards
+
+    &__bottom
+        margin: 0 auto
+        max-width: 192rem
+        display: flex
+        align-items: center
+        justify-content: space-between
+        font-size: 2.4rem
+        padding: 0 3rem
+        border-bottom: $card-border
+        flex-wrap: wrap
+
+        @include respond-to(medium-header)
+            flex-direction: column
+            align-items: flex-start
+
+        &__nav
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            flex-wrap: wrap
+
+            &__item
+                cursor: pointer
+                margin: 0 1rem
+
+                & a
+                    padding: 1.5rem 1rem
+
+        &__links
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            flex-wrap: wrap
+
+            &__item
+                padding: 1.5rem 1rem
+                cursor: pointer
+                margin: 0 1rem
+
+    &__categories
+        display: flex
+        align-items: flex-start
+        flex-direction: column
+        padding: 3rem 5rem 2rem
+        background-color: $white
+        border-bottom: $card-border
+        position: absolute
+        top: -999rem
+        left: 0
+        right: 0
+        z-index: 1
+
+        &__title
+            font-size: 3.6rem
+            margin-bottom: 4rem
+            text-decoration: underline
+
+        &__list
+            column-count: 4
+            min-width: 100%
+            max-height: 100%
+            font-size: 2.8rem
+
+            @include respond-to(medium-header)
+                column-count: 3 !important
+
+            @include respond-to(small)
+                column-count: 2 !important
+
+            @include respond-to(extra-small)
+                column-count: 1 !important
+
+            &__item
+                padding-bottom: 1rem
+
+    &__categories.open
+        animation: slideIn-categories .3s forwards
+
+    &__categories.closed
+        animation: slideOut-categories .3s forwards
+
+    & .input
+        max-height: 5rem
+        position: relative
+        opacity: .75
+        font-size: 2.8rem
+        -moz-box-sizing: border-box
+        -webkit-box-sizing: border-box
+        box-sizing: border-box
+        border: $input-border
+        border-radius: $border-radius-big
+
+        &__label
+            transition: all ease-in-out .25s
+            position: absolute
+            top: 1rem
+            left: 2rem
+            cursor: text
+
+        & input
+            background-color: transparent
+            border: none
+            border-radius: $border-radius-big
+            transition: all ease-in-out .25s
+            text-indent: 2rem
+            font-size: 2rem
+            font-family: $font
+            max-width: calc( 100% - 5.5rem )
+
+        & input:focus
+            outline: none
+
+        & input::placeholder
+            opacity: 0
+            font-size: 1.6rem
+
+        & svg
+            position: absolute
+            top: 0
+            right: 2rem
+            height: 2.5rem
+            width: 2.5rem
+            cursor: pointer
+
+    & .input:hover
+        opacity: 1
+
+    & .input:focus-within
+        opacity: 1
+        outline: $input-border-focused
+
+        & label
+            top: -1rem
+            left: 1rem
+            font-size: 2rem
+            background-color: $white
+            padding: 0 1rem
+            z-index: 2
+            color: $green
+
+        & input::placeholder
+            opacity: .5

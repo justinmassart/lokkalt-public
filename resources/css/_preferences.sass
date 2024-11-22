@@ -1,0 +1,35 @@
+.preferences
+    display: grid
+    grid-template-columns: 1fr 1fr
+    column-gap: 2rem
+    align-items: flex-start
+
+    & .main__title-container
+        grid-column: 1 / -1
+
+    & .section__title
+        margin-bottom: 4rem
+        font-size: $s-44
+
+    & .form
+
+        &__checkboxes-options
+            margin: 1rem 0 1rem 2rem
+
+            &__title
+                font-size: $s-24 !important
+                opacity: 1 !important
+                margin-bottom: 1rem
+
+        & label
+            font-size: $s-24 !important
+
+        & .button
+            margin-top: 3rem
+            min-width: 100%
+
+    @include respond-to('large')
+        grid-template-columns: 1fr
+
+        &__right
+            margin-top: 2rem

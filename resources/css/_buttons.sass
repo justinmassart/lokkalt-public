@@ -1,0 +1,214 @@
+.button
+    padding: 1.5rem 2rem
+    white-space: nowrap
+    background: none
+    border: none
+    border-radius: $border-radius-big
+    font-family: $font
+    font-size: 2rem
+    transition: all ease-in-out .25s
+    cursor: pointer
+    max-height: 5.4rem
+    position: relative
+
+.button-trash
+    padding: 1rem
+    background: none
+    border: 2px solid $danger
+    border-radius: $border-radius-small
+    font-family: $font
+    cursor: pointer
+    max-height: 4rem
+    max-width: 4rem
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    transition: all ease-in-out .3s
+
+    &__text
+        color: $danger
+        font-size: 2rem
+        transition: font-size .3s ease-in-out
+        font-size: 0
+
+    & svg
+        min-height: 4rem
+
+        & path
+            stroke: $danger
+            transition: all .3s ease-in-out
+
+        & .trash-lid
+            stroke: none
+            transform-origin: center
+            transition: all .3s ease-in-out
+
+    &:hover
+        background-color: $danger
+        max-width: 100%
+
+        & .button-trash__text
+            color: $white
+            width: auto
+            opacity: 1
+            margin-right: 1rem
+            font-size: 2rem
+
+        & svg
+
+            & path
+                stroke: $white
+
+            & .trash-lid
+                stroke: none
+                fill: $white
+                transform: rotate(30deg) translate(-5px, -5px)
+                // transform: translate(0, -5px)
+
+.btn-green-none
+    padding: 0 !important
+    color: $green
+    display: flex
+    align-items: center
+
+    & svg
+
+        & path
+            stroke: $green
+
+.btn-red-none
+    padding: 0 !important
+    color: $danger
+    display: flex
+    align-items: center
+
+    & svg
+
+        & path
+            stroke: $danger
+
+.btn-red-outlined
+    border: 2px solid $danger !important
+    color: $danger
+
+    &:hover
+        background-color: $danger
+        color: $white
+
+.btn-red-filled
+    background-color: $danger
+    color: $white
+
+.btn-small
+    font-size: 2rem !important
+
+.btn-big
+    font-size: 2.8rem !important
+
+.btn-green-filled
+    background-color: $green
+    border: 2px solid $green !important
+    color: $white
+
+.btn-green-filled:hover
+    background-color: $green-dark
+    border: 2px solid $green !important
+    box-shadow: $shadow
+
+.btn-green-outlined
+    border: 2px solid $green !important
+    color: $green
+
+.btn-green-outlined:hover
+    background-color: $green
+    box-shadow: $shadow
+    color: $white
+
+.btn-white-outlined
+    border: 2px solid $white !important
+    color: $white
+
+.btn-white-outlined:hover
+    background-color: $white
+    box-shadow: $shadow
+    color: $green
+
+.asset-btn
+    font-size: 2rem
+    font-variation-settings: 'wght' 700
+    display: flex
+    max-width: max-content
+    max-height: 5.4rem
+    border-radius: $border-radius-big
+    line-height: 1
+
+    &__text
+        padding: 2rem
+
+.asset-btn-in
+    color: $green
+    border: 0.2rem solid $green
+
+.asset-btn-warning
+    color: $warning
+    border: 0.2rem solid $warning
+
+.asset-btn-danger
+    color: $danger
+    border: 0.2rem solid $danger
+
+.button-count
+    max-width: 20rem
+    max-height: 5rem
+    display: flex
+    border-radius: $border-radius-big
+    overflow: hidden
+
+    &__minus,
+    &__plus
+        background-color: $green
+        border: none
+        min-width: 5rem
+        min-height: 5rem
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+
+        & svg
+
+            & path
+                stroke: $white
+
+    &__number
+        flex-grow: 1
+        width: 100%
+        border: none
+        border-top: 1px solid $green
+        border-bottom: 1px solid $green
+        background-color: transparent
+        text-align: center
+        font-size: 3.2rem
+        font-family: $font
+
+        &:focus-within
+            outline: none
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button
+            -webkit-appearance: none
+            margin: 0
+
+        &[type=number]
+            -moz-appearance: textfield
+
+.logout-btn
+    background: none
+    border: none
+    text-decoration: none
+    display: block
+    color: $danger
+    font-size: 2rem
+    font-family: $font
+    padding: 0 !important
+    cursor: pointer

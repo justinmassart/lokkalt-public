@@ -1,0 +1,194 @@
+.form
+    color: $green-dark
+
+    & input[type="checkbox"]
+        position: absolute
+        opacity: 0
+        cursor: pointer
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        height: auto !important
+        width: auto !important
+        margin: 0 !important
+        z-index: 5
+
+    & input[type="radio"]
+        position: absolute
+        opacity: 0
+        cursor: pointer
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+
+    & textarea
+        min-width: 100%
+        max-width: 100%
+        min-height: 5rem
+        max-height: 10rem
+        font-family: $font
+        font-size: 2rem
+        border: $input-border
+        border-radius: $border-radius-small
+
+    &__field
+        margin-bottom: 4rem
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        position: relative
+
+        &__label
+            font-size: $s-24
+            margin-bottom: 1rem
+
+            &__optional
+                font-size: 1.6rem
+
+        &__show-password
+            font-size: 1.6rem
+            position: absolute
+            right: -0.5rem
+            top: .5rem
+            padding: 1rem
+            cursor: pointer
+
+        &__input
+            background: none
+            border: $input-border
+            border-radius: $border-radius-big
+            min-height: 5rem
+            max-height: 5rem
+            min-width: 20rem
+            text-indent: 1rem
+            font-family: $font
+            font-size: 2rem
+
+        &__input::placeholder
+            color: $green-dark
+            opacity: .25
+            font-family: $font
+
+        &__reset-password
+            font-size: 1.6rem
+            cursor: pointer
+            margin-top: 0.5rem
+            margin-left: auto
+
+        &__error
+            font-size: 2rem
+            color: $danger
+            margin-top: 1rem
+
+        &__addresses-list
+            position: absolute
+            z-index: 10
+            left: 0
+            right: 0
+            top: calc( 100% + 1rem )
+            background-color: $white
+            border: $input-border
+            border-color: $green !important
+            border-radius: $border-radius-small
+            padding: 1rem
+            font-size: 2rem
+
+            &__header
+                display: flex
+                justify-content: space-between
+                align-items: flex-start
+
+                &__title
+                    margin-bottom: 1rem
+
+                & svg
+                    max-width: 2rem
+                    max-height: 2rem
+                    cursor: pointer
+
+                    &:hover
+
+                        & path
+                            stroke-width: .7rem
+
+                    & path
+                        stroke: $danger
+
+            &__item
+                padding: 1rem
+                cursor: pointer
+                border-radius: $border-radius-small
+                transition: background-color .2s ease-in-out
+
+                &:hover
+                    background-color: $green-lighter
+
+            &__item:not(:last-of-type)
+                margin-bottom: .5rem
+
+    &__field:has(input[name="profile-address"])
+        grid-column: 1
+
+    &__checkbox
+        display: flex
+        align-items: center
+        position: relative
+
+        & .checkmark
+            height: 1.5rem
+            width: 1.5rem
+            background-color: $white
+            border: $card-border
+            border-radius: 0.25rem
+
+        &__label
+            margin-left: 1rem
+            cursor: pointer
+            padding: 1rem
+            font-size: 2.4rem
+            opacity: 0.75
+
+        &:hover
+            .checkmark
+                background-color: $green-light
+
+        & input:checked ~ .checkmark
+            background-color: $green
+
+        & input:checked ~ &__label
+            opacity: 1
+
+    &__error
+        color: $danger
+        margin-top: 1rem
+
+.form-white
+    color: $white !important
+
+    & .form__field
+
+        &__input
+            color: $white !important
+            border: $input-border-white !important
+
+        &__input::placeholder
+            color: $white !important
+
+select
+
+    & option:first-of-type
+        display: none
+
+.update-field
+
+    &__description
+        font-size: 1.6rem
+        margin-bottom: 1rem
+
+.form__field:has(input[name='profile-emailUpdate'])
+    grid-column: 1
+
+.form__field:has(input[name='profile-phoneUpdate'])
+    grid-column: 2

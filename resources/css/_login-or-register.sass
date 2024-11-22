@@ -1,0 +1,91 @@
+.auth
+    display: grid
+    grid-template-columns: 1fr
+    column-gap: 2rem
+
+    & .section__title
+        margin-bottom: 4rem
+        font-size: $s-44
+
+    @include respond-to('large-plus')
+        grid-template-columns: 1fr 1fr
+
+    & .main__title-container
+        grid-column: 1 / -1
+
+        & svg
+            max-width: 6rem
+            max-height: 6rem
+
+            & path
+                fill: none
+                stroke: $green
+
+    &__login
+
+        & .form,
+        &__form
+
+            &__field
+
+                &__label
+                    font-size: $s-24
+
+                &__input
+                    min-width: 100%
+                    box-sizing: border-box
+
+            &__services
+                display: grid
+                grid-template-columns: 1fr 2fr
+                gap: 2rem
+                align-items: flex-end
+
+                &__container
+                    display: grid
+                    grid-template-columns: repeat(4, 1fr)
+                    gap: 2rem
+
+                @include respond-to('small')
+                    grid-template-columns: 1fr
+
+            & .forgot-password-link
+                font-size: $s-20
+                margin-top: 1rem
+                text-align: right
+                margin-left: auto
+
+            & .auth__login__form__services__item
+                width: 6.4rem
+                height: 6.4rem
+                background-color: $white
+                border: $card-border
+                border-radius: $border-radius-big
+
+        & button
+            min-width: 100%
+            margin-top: $content-spacing
+
+    &__register
+
+        &__card
+
+            &__content
+                font-size: $s-24
+                margin-bottom: 4rem
+
+            & .button
+                min-width: 100%
+
+.reset-password
+
+    &__description
+        font-size: 2rem
+        margin-top: 4rem
+
+    &__email
+        font-size: 2rem
+        font-variation-settings: $font-w-600
+        text-decoration: underline
+
+        margin: 2rem 0 4rem

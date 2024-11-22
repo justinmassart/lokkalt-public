@@ -1,0 +1,122 @@
+.filter
+    transition: padding .6s ease
+
+    &:not(:last-child)
+        border-bottom: $card-border
+
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        cursor: pointer
+        padding: 4rem
+
+        &__title
+            font-size: 3.2rem
+
+        & svg
+            width: 2.5rem
+            height: 2.5rem
+            transition: transform .3s ease
+
+    &__content
+        max-height: 0
+        opacity: 0
+        overflow: hidden
+        transition: all .3s ease
+        margin: 0 4rem
+
+    &__checkboxes
+        display: grid
+        grid-template-columns: repeat(5, minmax(5rem, 1fr))
+
+        &__item
+            display: flex
+            align-items: center
+            position: relative
+
+            & .checkmark
+                height: 1.5rem
+                width: 1.5rem
+                background-color: $white
+                border: $card-border
+                border-radius: 0.25rem
+
+            & input:checked ~ .checkmark
+                background-color: $green
+
+            & label
+                margin-left: 1rem
+                flex: 1
+                cursor: pointer
+                padding: 1rem
+
+            &:hover
+                .checkmark
+                    background-color: $green-light
+
+    &.expanded
+        padding-bottom: 4rem
+
+        & .filter__header
+
+            & svg
+                transform: rotate(180deg)
+
+        & .filter__content
+            max-height: 100rem
+            opacity: 1
+
+    & input[type="checkbox"]
+        position: absolute
+        opacity: 0
+        cursor: pointer
+        height: 0
+        width: 0
+
+    & input[type="radio"]
+        position: absolute
+        opacity: 0
+        cursor: pointer
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+
+.shop-size-filter
+
+    & .form
+
+        &__item
+            display: flex
+            align-items: center
+            position: relative
+
+            & .checkmark
+                height: 1.5rem
+                width: 1.5rem
+                background-color: $white
+                border: $card-border
+                border-radius: 0.25rem
+
+            & input:checked ~ .checkmark
+                background-color: $green
+
+            & label
+                margin-left: 1rem
+                flex: 1
+                cursor: pointer
+                padding: 1rem
+
+            &:hover
+                .checkmark
+                    background-color: $green-light
+
+.location-filter
+
+    & .form
+
+        &__field
+
+            &__input
+                min-width: 50%

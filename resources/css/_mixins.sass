@@ -1,0 +1,52 @@
+@mixin respond-to($media)
+    @if $media == 'extra-small'
+        @media only screen and (max-width: 480px)
+            @content
+
+    @else if $media == 'small'
+        @media only screen and (max-width: 600px)
+            @content
+
+    @else if $media == 'small-large'
+        @media only screen and (max-width: 700px)
+            @content
+
+    @else if $media == 'medium'
+        @media only screen and (max-width: 768px)
+            @content
+
+    @else if $media == 'medium-plus'
+        @media only screen and (max-width: 800px)
+            @content
+
+    @else if $media == 'medium-header'
+        @media only screen and (max-width: 850px)
+            @content
+
+    @else if $media == 'medium-large'
+        @media only screen and (max-width: 992px)
+            @content
+
+    @else if $media == 'large'
+        @media only screen and (max-width: 1024px)
+            @content
+
+    @else if $media == 'large-plus'
+        @media only screen and (min-width: 1150px)
+            @content
+
+    @else if $media == 'extra'
+        @media only screen and (min-width: 1280px)
+            @content
+
+    @else if $media == 'extra-large'
+        @media only screen and (max-width: 1360px)
+            @content
+
+    @else if $media == 'low-huge'
+        @media only screen and (max-width: 1500px)
+            @content
+
+    @else if $media == 'huge'
+        @media only screen and (max-width: 1630px)
+            @content

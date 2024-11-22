@@ -1,0 +1,89 @@
+.main
+    margin: 0 2.5rem
+
+    &__container
+        margin: 0 auto
+        max-width: 148rem
+
+    &__title-container
+        display: flex
+        align-items: flex-start
+        margin-bottom: $section-spacing
+
+        & svg
+            transform: translateY(5px)
+            margin-right: 4rem
+
+            & path
+                stroke: $green
+
+            @include respond-to('large')
+                max-height: 4rem
+                max-width: 4rem
+                transform: translateY(0)
+
+            @include respond-to('extra-small')
+                max-height: 3rem
+                max-width: 3rem
+
+    & .main-title
+        font-size: 8.4rem
+        font-variation-settings: $font-w-600
+        color: $green
+
+        @include respond-to('large')
+            font-size: 6rem
+
+        @include respond-to('extra-small')
+            font-size: 4rem
+
+section
+    margin-bottom: $section-spacing !important
+
+    & .section__header
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+
+        & button
+            margin-top: 2rem
+
+    & .section__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        margin-bottom: 6rem
+
+    @include respond-to('large')
+
+        & .section__top
+            flex-direction: column
+            align-items: flex-start
+            justify-content: flex-start
+
+        & .section__title
+            margin-bottom: 2rem
+
+    & .section__title
+        font-size: 4rem
+
+    & .section__see-more
+        font-size: 2.8rem
+        text-decoration: none
+        color: $green-dark
+        opacity: .5
+        display: flex
+        align-items: center
+        white-space: nowrap
+        max-width: 100%
+        transition: opacity ease-in-out .3s
+
+        &:hover
+            opacity: 1
+
+        & svg
+            margin-left: 1rem
+
+.empty-message
+    font-size: 2.4rem

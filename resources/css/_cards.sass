@@ -1,0 +1,997 @@
+// TODO : Check font weight of cards
+
+.card
+    background-color: $white
+    border: $card-border
+    border-radius: $border-radius-big
+    position: relative
+    transition: border .3s ease-in-out, box-shadow .3s ease-in-out, opacity .3s ease-in-out
+    box-sizing: border-box
+    cursor: pointer
+    padding: 2rem
+
+    &__image
+        position: relative
+        border: $card-border
+        border-radius: $image-border-radius
+        overflow: hidden
+        max-height: 100%
+        max-width: 100%
+        display: flex
+
+        &__gradient
+            position: absolute
+            z-index: 1
+            top: 0
+            left: 0
+            min-height: 100%
+            min-width: 100%
+            background: $card-gradient-moz
+            background: $card-gradient-webkit
+            background: $card-gradient
+            filter: $card-gradient-filter
+
+    & img
+        position: relative
+        z-index: 0
+        object-fit: cover
+        width: 100%
+        height: 100%
+        transition: all .3s ease-in-out
+
+    &__name
+        z-index: 3
+
+    &__infos
+
+        &__score
+            color: $green
+
+    &:hover
+        box-shadow: $shadow
+        border: $card-border-hover
+
+        & .card__image
+
+            & img
+                transform: scale(1.1)
+
+.card-na
+    background-color: $white
+    border: $card-border
+    border-radius: $border-radius-big
+    box-sizing: border-box
+    padding: 2rem
+
+    &__image
+        position: relative
+        border: $card-border
+        border-radius: $image-border-radius
+        overflow: hidden
+        max-height: 100%
+        max-width: 100%
+        display: flex
+
+        &__gradient
+            position: absolute
+            z-index: 1
+            top: 0
+            left: 0
+            min-height: 100%
+            min-width: 100%
+            background: $card-gradient-moz
+            background: $card-gradient-webkit
+            background: $card-gradient
+            filter: $card-gradient-filter
+
+        & img
+            position: relative
+            z-index: 0
+            object-fit: cover
+            width: 100%
+            height: 100%
+            transition: all .3s ease-in-out
+
+.variant-card-1C
+    transition: all .3s ease-in-out
+    min-height: 10.2rem
+    min-width: 10.2rem
+    padding: 0 !important
+    opacity: .75
+
+    &__image
+        border: none !important
+        overflow: hidden
+        min-height: 10.2rem
+        min-width: 10.2rem
+
+        & img
+            object-fit: cover
+            min-width: 10.2rem
+            min-height: 10.2rem
+
+    &__name
+        opacity: 0
+        visibility: hidden
+        transition: all .3s ease-in-out
+        position: absolute
+        bottom: -1rem
+        left: 50%
+        transform: translateX(-50%)
+        font-size: 2rem
+        background-color: $white
+        border: $card-border
+        border-radius: $border-radius-small
+
+        &__title
+            white-space: nowrap
+            padding: 1rem 2rem
+
+    &:hover
+        opacity: 1
+
+        & .variant-card-1C__name
+            opacity: 1
+            visibility: visible
+
+.category-card
+    max-width: 23rem
+    padding: 0 !important
+    overflow: hidden
+
+    &__image
+        border: none !important
+        object-fit: cover !important
+        width: 100%
+        height: 100%
+        border-radius: 0 !important
+
+    &__name
+        font-size: $s-28
+        position: absolute
+        top: 2rem
+        left: 50%
+        transform: translateX(-50%)
+        color: $white
+        text-align: center
+        transition: all .3s ease-in-out
+        min-width: calc( 100% - 4rem )
+
+        &::after
+            content: ''
+            display: block
+            width: 0
+            height: 1px
+            background: $white
+            transition: width .25s
+            border-radius: $border-radius-small
+
+    &:hover
+
+        & .category-card__name
+
+            &::after
+                width: 100%
+
+.category-card-2C-small
+    max-height: 23rem !important
+    max-width: 23rem !important
+
+.category-card-2C
+    max-height: 35rem !important
+    max-width: 23rem !important
+
+.article-card
+    padding: 2rem
+    max-width: 48rem
+
+    &__image
+        max-height: 19.4rem
+
+        &__price-favourite
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            position: absolute
+            bottom: 0
+            left: 0
+            right: 0
+            z-index: 11
+            min-height: 4.8rem
+            max-height: 5rem
+
+            &__price
+                background-color: $green
+                color: $white
+                padding: 1rem
+                border-radius: $price-border-radius
+                max-width: calc(100% - 10rem)
+
+                &__value
+                    font-size: 2.8rem
+                    font-variation-settings: 'wght' 600
+                    text-overflow: ellipsis
+                    white-space: nowrap
+                    overflow-x: hidden
+
+                    & .article-card__image__price-favourite__value__unit
+                        font-size: 1.6rem
+                        margin-left: .5rem
+
+            &__favourite
+                background-color: $green
+                color: $white
+                border-radius: $favourite-border-radius
+                margin-left: 1rem
+                min-height: 4.8rem
+                display: flex
+                align-items: center
+                justify-content: center
+
+                & svg
+                    width: 3rem
+                    height: 3rem
+
+                    & path
+                        stroke: $white !important
+
+                &:hover
+
+                    & svg
+
+                        & path
+                            fill: $white !important
+
+    &__infos
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        max-width: 100%
+        margin-top: 1rem
+
+        & div
+            text-overflow: ellipsis
+            white-space: nowrap
+            overflow-x: hidden
+            max-width: 100%
+
+        &__title
+            font-size: 2.8rem
+            display: block
+            text-overflow: ellipsis
+            white-space: nowrap
+            max-width: 100%
+            overflow-x: hidden
+            margin-bottom: 1rem
+            line-height: 1.1
+
+        &__shop
+            font-size: 2.8rem
+            text-decoration: underline
+            display: block
+            text-overflow: ellipsis
+            white-space: nowrap
+            max-width: 100%
+            overflow-x: hidden
+            margin-bottom: 1rem
+            line-height: 1.1
+
+        &__variants
+            font-size: 2.4rem
+            display: flex
+            margin-bottom: 1rem
+            opacity: .75
+            line-height: 1.1
+
+            &__title
+                margin-right: 1rem
+
+            &__list
+                display: block
+                text-overflow: ellipsis
+                white-space: nowrap
+                max-width: 100%
+                overflow-x: hidden
+
+        &__address
+            font-size: 2.4rem
+            opacity: .75
+            display: block
+            text-overflow: ellipsis
+            white-space: nowrap
+            max-width: 100%
+            overflow-x: hidden
+            margin-bottom: 1rem
+            line-height: 1.1
+
+        &__score
+            display: flex
+            align-items: flex-end
+            font-size: 2rem
+            font-variation-settings: 'wght' 600
+
+            &__stars
+                margin-right: .5rem
+
+    &__btns
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        margin-top: 2rem
+
+        &__btn
+            position: relative
+            z-index: 100
+            margin-top: 2rem
+            min-width: 100%
+
+.article-card-4C
+
+    & .article-card__image__price-favourite__favourite__btn
+        padding: 1rem !important
+        max-height: 4.8rem
+        cursor: pointer
+
+.article-card-3C
+
+    & .article-card__image
+        max-height: 14rem
+
+    & .article-card__image__price-favourite__favourite__btn
+        padding: 1rem !important
+        max-width: 4rem
+        max-height: 4rem
+
+    & .article-card__image__price-favourite__favourite
+        max-width: 4rem
+        max-height: 4rem
+
+        & button
+            max-width: 4rem
+            max-height: 4rem
+
+        & .icon-container
+            max-width: 2rem
+            max-height: 2rem
+
+        & svg
+            max-width: 2rem
+            max-height: 2rem
+
+    & .article-card__image__price-favourite__price__value
+        font-size: 2rem !important
+
+    & .article-card__image__price-favourite__value__unit
+        font-size: 1.2rem !important
+
+.shop-card
+    display: flex
+    align-items: stretch
+
+    &__image
+        max-width: 13.2rem
+        margin-right: 2rem
+
+    &__infos
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: stretch
+
+        &__name
+            font-size: 2.8rem
+            font-variation-settings: 'wght' 600
+            text-overflow: ellipsis
+            white-space: nowrap
+            overflow-x: hidden
+
+        &__category,
+        &__address
+            font-size: $s-24
+            opacity: .75
+            text-overflow: ellipsis
+            white-space: nowrap
+            max-width: 100%
+            overflow-x: hidden
+            display: block
+            line-height: 1.2
+
+        &__score
+            display: flex
+            align-items: flex-end
+
+            &__count
+                font-size: 2rem !important
+                font-variation-settings: 'wght' 600
+
+.shop-card-4C
+    max-width: 48.2rem
+
+    & .shop-card__image
+        min-width: 13.2rem
+        max-width: 13.2rem
+        margin-right: 2rem
+
+    & .shop-card__infos
+        max-width: calc( 100% - 13.2rem - 2rem )
+
+.shop-card-6C
+    max-width: 73.2rem
+    flex-direction: column
+
+    &__container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: stretch
+
+    & .shop-card__image
+        max-width: 25rem
+        max-height: 25rem
+        box-sizing: border-box
+
+    & .shop-card__infos
+        max-width: 42rem
+
+        &__name,
+        &__category,
+        &__address
+            margin-bottom: 2rem
+
+        &__name,
+        &__category,
+        &__address,
+        &__articles-count
+            display: block !important
+            text-overflow: ellipsis
+            white-space: nowrap
+            max-width: 100%
+            overflow-x: hidden
+
+        &__category,
+        &__address,
+        &__articles-count,
+        &__shop-status
+            font-size: 2.8rem
+
+        &__articles-count
+            opacity: .75
+
+        &__shop-status
+            color: $green
+
+    @include respond-to('small')
+        & .shop-card__image
+            display: none
+
+        & .shop-card__container-bottom
+            flex-direction: column
+
+            & .shop-card__infos__score
+                margin-bottom: 2rem
+
+.article-description-card
+
+    &__text
+        font-size: 2.8rem
+
+.article-details-card
+
+    &__list
+        font-size: 2.4rem
+        display: grid
+        grid-template-columns: 1fr
+        grid-gap: 1rem
+        max-width: 100%
+
+        &__item
+            display: grid
+            grid-template-columns: 1fr 1fr
+            padding: 2rem
+            border-radius: $border-radius-big
+            max-width: 100%
+
+            &:nth-child(odd)
+                background-color: $white-darker
+
+.article-comment-card
+    display: flex
+    align-items: flex-start
+
+    &__image
+        min-width: 11rem
+        min-height: 11rem
+
+        & img
+            border-radius: $border-radius-big
+
+    &__infos
+        margin-left: 2rem
+        min-height: 11rem
+        min-width: calc( 100% - 11rem - 2rem )
+        display: flex
+        flex-direction: column
+
+        &__name-score-options
+            display: flex
+            align-items: center
+            margin-bottom: 2rem
+
+            @include respond-to('medium')
+                flex-direction: column
+                align-items: flex-start
+                position: relative
+
+                &__score
+                    margin-top: 2rem
+
+                &__options
+                    position: absolute
+                    top: 0
+                    right: 0
+
+            &__name
+                margin-right: auto
+                font-size: 2.8rem
+                font-variation-settings: 'wght' 500
+
+            &__score
+                margin-right: 2rem !important
+
+            &__options
+                opacity: .25
+                cursor: pointer
+                min-height: 3rem
+                display: flex
+                align-items: center
+                transition: all .3s ease-in-out
+
+                &:hover
+                    opacity: 1
+
+        &__comment
+            font-size: 2rem
+
+        &__answer
+            margin-top: 1rem
+            padding-top: 1rem
+            border-top: $card-border
+            font-size: 2rem
+
+        &__answerDate
+            margin-left: auto
+            font-size: 2rem
+            opacity: .5
+            text-align: right
+            margin-top: 2rem
+
+        &__actions
+            display: flex
+            flex-wrap: wrap
+            align-items: flex-end
+            justify-content: space-between
+
+            @include respond-to('medium')
+                flex-direction: column
+                align-items: flex-start
+
+            &__btn-container
+                display: flex
+                align-items: center
+
+            &__answer
+                margin: 2rem 2rem 0 0
+
+            &__like
+                align-items: flex-end !important
+                margin: 2rem 2rem 0 0
+
+                & svg
+                    margin-left: 0.5rem
+
+            &__dislike
+                align-items: flex-end !important
+                margin: 2rem 0 0
+
+                & svg
+                    margin-left: 0.5rem
+
+            &__date
+                font-size: 2rem
+                opacity: .5
+                margin: 2rem 0 0 auto
+
+.article-total-score-card
+
+    &__score-count
+        display: flex
+        align-items: flex-end
+        padding-bottom: 2rem
+        margin-bottom: 4rem
+        border-bottom: $card-border
+
+        &__container
+            display: flex
+            align-items: flex-start
+
+        &__stars
+            min-height: 5rem
+            margin-right: 1rem
+
+        &__total
+            font-size: 5.2rem
+            font-variation-settings: 'wght' 500
+            color: $green
+            margin-right: auto
+
+        &__count
+            margin-left: auto
+            font-size: 3.2rem
+            font-variation-settings: 'wght' 500
+            color: $green
+
+    &__details
+        margin: 0 4rem
+
+        &__list
+            min-width: 100%
+            overflow: hidden
+
+            &__item
+                font-size: 4rem
+                display: flex
+                align-items: center
+                min-width: 100%
+
+                &:not(:first-of-type)
+                    margin-top: 2rem
+
+                &__number
+                    min-width: 2.5rem
+                    text-align: center
+                    margin-right: 2rem
+
+                &__rectangles
+                    position: relative
+                    height: 2rem
+                    display: flex
+                    flex: 1 0 auto
+
+                    &__grey
+                        position: absolute
+                        top: 0
+                        bottom: 0
+                        left: 0
+                        right: 0
+                        display: block
+                        background-color: $green-light
+                        border-radius: $border-radius-small
+
+                    &__green
+                        top: 0
+                        bottom: 0
+                        left: 0
+                        position: absolute
+                        display: block
+                        background-color: $green
+                        border-radius: $border-radius-small
+                        max-width: 100%
+
+.question-card
+    font-size: 2.4rem
+
+    &__question
+        display: flex
+        align-items: flex-start
+
+        &__text
+            margin-right: auto
+
+        & svg
+            transition: all .3s ease
+            margin: .6rem 0 0 2rem
+
+    &__answer
+        max-height: 0
+        opacity: 0
+        overflow: hidden
+        transition: max-height .3s ease, opacity .3s ease
+
+        &__text
+            padding-top: 2rem
+            margin-top: 2rem
+            border-top: $card-border
+
+        &__date
+            font-size: 2rem
+            opacity: .5
+            text-align: right
+            margin-top: 2rem
+
+    &.expanded
+
+        & .question-card__question
+
+            & svg
+                transform: rotate(180deg)
+
+        & .question-card__answer
+            max-height: 100rem
+            opacity: 1
+            transition: max-height .3s ease, opacity .3s ease
+
+.shop-event-card
+    font-size: 2.8rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-height: 15.2rem
+
+    &__name
+        margin-right: 2rem
+
+    &__date
+        max-width: 12.5rem
+        color: $green
+        display: flex
+        flex-direction: column
+        align-items: center
+        flex: 1 1 auto
+        border-left: $card-border
+        padding-left: 2rem
+
+        &__day
+            font-size: 6rem
+
+    @include respond-to('small')
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+
+        &__name
+            margin-right: 0
+            margin-bottom: 2rem
+            border-bottom: $card-border
+            min-width: 100%
+            padding-bottom: 2rem
+
+        &__date
+            border-left: none
+            flex-direction: row
+            justify-content: flex-end
+            margin-left: auto
+
+            &__day
+                font-size: 4rem
+
+            &__month
+                margin: 0 2rem
+
+.system-notifications-card
+    font-size: 2rem
+    max-width: 73.2rem
+
+    &__title
+        font-size: 2.4rem
+        font-variation-settings: 'wght' 500
+
+    &__event
+        margin: 2rem 0
+
+    &__date
+        text-align: right
+        opacity: .5
+
+.cart-total-card
+    max-width: 48rem
+
+    &__title
+        font-size: 4rem
+        font-variation-settings: 'wght' 600
+        display: flex
+        align-items: baseline
+
+        &__span
+            font-size: 2.8rem
+            display: flex
+            margin-left: 1rem
+            position: relative
+
+            & .fees
+                position: absolute
+                display: none
+                left: 50%
+                top: -400%
+                transform: translateX(-50%)
+                font-size: 2.4rem
+                background-color: $white-darker
+                border: $card-border
+                border-radius: $border-radius-big
+                box-shadow: $shadow
+                padding: 2rem
+
+            &:hover
+
+                & .fees
+                    display: block
+
+        & svg
+            margin-left: 1rem
+
+    &__articles-price
+        font-size: 3.2rem
+        font-variation-settings: 'wght' 500
+        display: flex
+        justify-content: space-between
+        flex: 1 0 auto
+        margin: 2rem 0 4rem
+
+        &__separator
+            margin: 0 1rem
+
+    & .button
+        min-width: 100%
+
+.pack-card
+    font-size: 3.2rem
+    max-width: 48rem
+    min-height: 30rem
+    display: flex
+    flex-direction: column
+
+    &__header
+        color: $green
+        display: flex
+        align-items: center
+
+        &__title
+            margin-right: auto
+
+        & svg
+            margin-left: 1rem
+
+            & path
+                stroke: $green
+
+    &__list
+        font-size: 2rem
+        list-style: inside
+        margin: 2rem 1rem 0
+
+        &__item
+
+            &:not(:last-of-type)
+                margin-bottom: 1rem
+
+    &__price
+        text-align: right
+        margin-top: auto
+
+    &.pack-selected
+        border: $border-green-1
+        outline: $border-green-2
+
+.packs-resume-card
+    max-width: 48rem
+
+    & h3
+        font-size: 3.2rem
+        font-variation-settings: 'wght' 600
+
+    &__title
+        margin-bottom: 4rem
+
+    &__resume__selected-total
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        font-size: 2.8rem
+
+    &__resume__list
+        font-size: 2.4rem
+        margin: 2rem 1rem 6rem
+
+        &__item
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            border-bottom: $card-border
+            margin-bottom: 2rem
+
+            &__pack
+                color: $green
+
+            &__price
+                white-space: nowrap
+
+    &__total
+
+        &__packs-price
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            font-size: 2.4rem
+            margin: 2rem 1rem 4rem
+            border-bottom: $card-border
+
+            &__packs
+                color: $green
+
+            &__price
+                white-space: nowrap
+
+    & .button
+        min-width: 100%
+
+.cart-resume-card
+    max-width: 73rem
+
+    &__title
+        font-size: 4rem
+        font-variation-settings: 'wght' 500
+        margin-bottom: 4rem
+
+    &__article
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+
+        &:not(:first-of-type)
+            padding-top: 2rem
+            margin-top: 2rem
+            border-top: $card-border
+
+        &__image
+            width: 9.8rem
+            height: 9.8rem
+
+            & img
+                // TODO : center it
+                object-position: 20%
+
+        &__infos
+            margin: 0 2rem
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-self: stretch
+            max-width: 40rem
+
+            &__title,
+            &__count,
+            &__shop
+                text-overflow: ellipsis
+                white-space: nowrap
+                overflow-x: hidden
+                max-width: 100%
+
+            &__title
+                font-size: 3.2rem
+
+            &__count
+                font-size: 2.4rem
+
+            &__shop
+                font-size: 2.4rem
+                opacity: .5
+
+        &__price
+            font-size: 2.8rem
+            margin-left: auto
+
+    &__sub-total
+        margin-top: 6rem
+        font-size: 3.2rem
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        padding-bottom: 1rem
+        border-bottom: $card-border
+
+    &__total
+        margin-top: 2rem
+        font-size: 4rem
+        font-variation-settings: 'wght' 600
+        display: flex
+        justify-content: space-between
+        align-items: flex-end

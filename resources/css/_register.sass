@@ -1,0 +1,88 @@
+.register
+
+    &__form
+
+        & .form__field__input
+            min-width: 100%
+
+        &__top
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            align-items: flex-end
+            column-gap: 2rem
+
+            @include respond-to('extra-large')
+                grid-template-columns: repeat(2, 1fr)
+
+            @include respond-to('small-large')
+                grid-template-columns: 1fr
+
+        &__bottom
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 2rem
+
+            & .register__form__left-btn
+                grid-column: 1
+                min-width: 100%
+
+            & .register__form__right-btn
+                grid-column: 2
+                min-width: 100%
+
+            @include respond-to('medium')
+                grid-template-columns: 1fr
+
+                & .button
+                    grid-column: 1
+                    min-width: 100%
+
+.confirm-email
+    font-size: 2.8rem
+
+    &__description
+        margin-top: 4rem
+
+    &__email
+        margin-top: 2rem
+        font-variation-settings: $font-w-600
+        text-decoration: underline
+
+    &__explanation
+        margin-top: 2rem
+
+    & button
+        margin-top: 4rem
+
+.profile
+
+    &__delete-account
+        margin-bottom: 6rem
+        font-size: 2rem
+        border-color: $danger
+
+        &__title
+            font-size: 3.2rem
+            margin-bottom: 2rem
+
+        &__description
+            font-size: 2.4rem
+            margin-bottom: 2rem
+
+        &__actions
+            display: grid
+            grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr))
+            gap: 2rem
+
+    &__delete-account-notice
+        margin-bottom: 6rem
+        font-size: 2rem
+        border-color: $danger
+
+        &__title
+            font-size: 3.2rem
+            margin-bottom: 2rem
+
+        &__description
+            font-size: 2.4rem
+            margin-bottom: 2rem

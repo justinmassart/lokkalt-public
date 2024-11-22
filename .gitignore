@@ -1,0 +1,53 @@
+/vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
+/.vscode
+/.phpunit.cache
+.DS_Store
+dump.rdb
+_ide_helper.php
+_ide_helper_models.php
+.vite
+.idea/
+lokkalt-testing
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage/*
+!public/storage/img/
+!public/storage/svg/
+!public/storage/.gitignore
+public/hot
+
+storage/app/public/*
+!storage/app/public/img/
+!storage/app/public/svg/
+!storage/app/public/.gitignore
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
+storage/*.key
+.env
+.env.*
+!.env.example
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
+*.pem
+data.ms/
+public/sitemap.xml
+exam.todo
+pfe.md
+
+// Filament langs
+
+lang/vendor/
+vite.config.js.*
+.editorconfig

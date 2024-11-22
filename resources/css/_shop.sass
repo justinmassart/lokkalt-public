@@ -1,0 +1,77 @@
+.shop
+
+    &__top
+
+        &__infos
+
+            &__header
+
+                &__category,
+                &__address
+                    font-size: 2.4rem
+                    opacity: .75
+                    margin-top: 2rem
+
+                &__score-favourite
+                    margin-top: 2rem
+
+            &__description
+                flex: 1
+
+                &__title
+                    font-size: 4rem
+                    margin-bottom: 2rem
+
+                &__content
+                    font-size: 2.8rem
+
+.shop-articles-categories
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(17.25rem, 23rem))
+        gap: 2rem
+
+.shop-other-shops
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(48rem, 1fr))
+        gap: 2rem
+
+.shop-articles
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(35rem, auto))
+        gap: 2rem
+
+.shop-events
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+        gap: 2rem
+
+.shop-notifications
+
+    &__intro
+        font-size: $s-32
+        margin-bottom: 4rem
+
+    &__form
+        max-width: 60rem
+        display: grid
+        gap: 2rem
+        align-items: flex-end
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 28rem))
+
+        &__field
+            margin-bottom: 0
+
+.shops
+
+    &__list
+        display: grid
+        gap: 2rem
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 48rem))

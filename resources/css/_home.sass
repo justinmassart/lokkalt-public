@@ -1,0 +1,76 @@
+.intro
+    display: flex
+    align-items: center
+    position: relative
+    margin-top: 10rem
+
+    &__left
+        max-width: 74rem
+
+        &__title
+            color: $green
+            font-size: 5.2rem
+            font-variation-settings: 'wght' 700
+            margin-bottom: 4rem
+
+        &__explanation
+            font-size: 3.2rem
+            margin-bottom: 4rem
+
+        & .button
+            margin-top: 2rem
+
+    &__right
+        position: absolute
+        z-index: -1
+        margin-left: 4rem
+        right: 0
+        transition: opacity .3s ease-in-out
+
+        @include respond-to('low-huge')
+            opacity: 0.2
+
+        &__image
+            border-radius: $border-radius-big
+            overflow: hidden
+            width: 70rem
+            height: 48rem
+
+            & img
+                min-width: 105%
+                min-height: 105%
+                object-fit: cover
+
+        &__background
+            background-color: $green
+            border-radius: $border-radius-big
+            transform: rotate(-4deg)
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            z-index: -1
+            opacity: .5
+
+.popular-categories
+
+    &__list
+        grid-template-columns: repeat(auto-fit, minmax(17.25rem, 23rem))
+
+    @include respond-to('extra-small')
+        &__list
+            grid-template-columns: repeat(auto-fit, minmax(17.25rem, 1fr))
+
+.quick-articles
+
+    &__list
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+
+    &__slider
+        margin-top: 2rem
+
+.popular-shops
+
+    &__list
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 48rem))

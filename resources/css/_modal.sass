@@ -1,0 +1,166 @@
+.modal-container
+    position: fixed
+    z-index: 1000
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.5)
+    display: flex
+    justify-content: flex-start
+
+.modal
+    width: 60%
+    max-width: 50rem
+    background-color: #fff
+    padding: 2rem
+    border-radius: 0 1rem 1rem 0
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
+    z-index: 1001
+    height: 100%
+    overflow-y: scroll
+
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        font-size: 2.4rem
+        margin-bottom: 4rem
+
+        & svg
+            width: 5rem
+            height: 5rem
+            cursor: pointer
+
+            & path
+                stroke: $danger
+
+    &__body
+        display: grid
+        grid-template-columns: 1fr
+        gap: 2rem
+
+        &__top
+            font-size: 2rem
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+
+            &__reset
+                color: $danger
+                cursor: pointer
+
+        &__filter
+            border: $card-border
+            border-radius: $border-radius-small
+
+            &:last-of-type
+                margin-bottom: 10rem
+
+            &__button
+                display: block
+                font-size: 2rem
+                min-height: 2rem
+                min-width: calc( 100% - 4rem )
+                padding: 2rem
+                transition: background-color ease-in-out .1s
+                cursor: pointer
+
+                &:hover
+                    background-color: $green-lighter
+
+            &__content
+                margin: 0 2rem 2rem
+                padding-top: 2rem
+                border-top: $card-border
+                font-size: 1.8rem
+                display: grid
+                grid-template-columns: repeat(auto-fit, minmax(40%, 1fr))
+                gap: 2rem
+
+            &__prices
+                display: flex
+                flex-wrap: wrap
+
+                & .form__field
+                    margin-bottom: 0
+
+                    &__input
+                        max-width: 10rem !important
+                        min-width: 10rem !important
+            &__search
+
+                &__form
+                    border-top: none
+                    display: flex
+                    align-items: center
+
+                    & label
+                        max-width: max-content
+
+                    & input
+                        flex: 1
+                        min-height: 2.5rem
+                        font-size: 1.6rem
+                        border: none
+                        border-bottom: 1px solid $green-dark
+
+                    & svg
+                        width: 2rem
+                        height: 2rem
+
+        & .filter_disabled
+            opacity: .5
+            cursor: not-allowed
+
+            & .modal__body__filter__button
+                cursor: not-allowed
+
+                &:hover
+                    background-color: $white
+
+.checkbox
+    display: flex
+    align-items: center
+    position: relative
+
+    & input[type="checkbox"]
+        position: absolute
+        opacity: 0
+        cursor: pointer
+        height: 0
+        width: 0
+
+    & input[type="radio"]
+        position: absolute
+        opacity: 0
+        cursor: pointer
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+
+    & .checkmark
+        display: inline-block
+        height: 1.5rem
+        width: 1.5rem
+        background-color: $white
+        border: $card-border
+        border-radius: 0.25rem
+
+    & input:checked ~ .checkmark
+        background-color: $green
+
+    & label
+        padding-left: 3rem
+        flex: 1
+        cursor: pointer
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+
+    &:hover
+        .checkmark
+            background-color: $green-light
