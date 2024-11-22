@@ -1,4 +1,6 @@
-# Lokalt
+# Lokkalt
+
+This was my last year project at school. It is not used anymore.
 
 [EN] - The digital ally to boost your business - the solution for your local shopping.
 
@@ -16,7 +18,7 @@ _The rest will be redacted in french_
 
 ## Tables des matières
 
-- [Lokalt](#lokalt)
+- [Lokkalt](#lokkalt)
   - [Liens](#liens)
   - [Tables des matières](#tables-des-matières)
   - [Introduction](#introduction)
@@ -51,13 +53,13 @@ En fait, une fois qu’on regarde bien les plateformes comme Shopify ou Wix, on 
 
 ### Public cible
 
-Lokalt doit alors viser des clients avec plus de précision que les concurrents déjà présent. C’est pour cela que Lokalt sera fait en pensant à un commerçant, avec un commerce de petite ou moyenne taille car les grands commerces sont plus à même de créer leur propre site web, qui ne souhaite que de vendre ces produits en lignes et uniquement dans son pays pour éviter toutes surcharges de travail au niveau de créer des commerces internationaux. Tout en gardant des prix abordables et surtout configurables !
+Lokkalt doit alors viser des clients avec plus de précision que les concurrents déjà présent. C’est pour cela que Lokkalt sera fait en pensant à un commerçant, avec un commerce de petite ou moyenne taille car les grands commerces sont plus à même de créer leur propre site web, qui ne souhaite que de vendre ces produits en lignes et uniquement dans son pays pour éviter toutes surcharges de travail au niveau de créer des commerces internationaux. Tout en gardant des prix abordables et surtout configurables !
 
 C’est-à-dire que les commerçants pourront créer leur propre pack d’options/outils et ne payer que pour ce qu’ils utilisent. Cela permettra de ne pas avoir de frais inutiles et de ne pas avoir des outils qui ne servent à rien, le prix des options/outils sera du coup plus bas, rien n’est encore réfléchit à ce niveau là mais les prix des outils se trouveront probablement entre 5€ et 20€ par option, en accord avec l’utilité/coût de l’outil.
 
 Lors de la mise en ligne du projet, pour la date de présentation du PFE, il faut que le site soit utilisable par des commerçants en Belgique obligatoirement, avec comme langues l’allemand, l’anglais, le français et le néerlandais. Optionnellement, si le temps le permet, il sera alors utilisable par des commerçants en France, au Luxembourg, au Pays-Bas et en Allemagne. (La seule chose qui change entre le pays, c’est la devise et les taxes.)
 
-Tout type de commerce est la bienvenue, que ce soit un commerce de vêtements, de nourriture, de meubles, de produits de beauté, etc. Tant que le commerce est légal et que le commerçant est en règle avec la loi, il pourra profiter de Lokalt.
+Tout type de commerce est la bienvenue, que ce soit un commerce de vêtements, de nourriture, de meubles, de produits de beauté, etc. Tant que le commerce est légal et que le commerçant est en règle avec la loi, il pourra profiter de Lokkalt.
 
 Lorsque mon design sera terminé, je commencerai alors à aller trouver des commerçants pour avoir mes utilisateurs tests. Leurs retours seront très importants pour la suite du projet, ils me permettront de savoir si mon projet est viable ou non, s’il y a des choses à changer ou à ajouter, etc. J’ai déjà deux clients pour m’aider dans cette tâche, un commerce de vins et un commerce de produits locaux.
 
@@ -155,7 +157,7 @@ En tant qu’utilisateur commerçant, je veux pouvoir :
     - créer une carte de fidélité (électronique)
     - modifier une carte de fidélité (électronique)
     - supprimer une carte de fidélité (électronique)
-    - créer un système pour qu’un client puisse récupérer sa carte de fidélité électronique si il se crée un compte sur Lokalt, en demandant un code chez le commerçant
+    - créer un système pour qu’un client puisse récupérer sa carte de fidélité électronique si il se crée un compte sur Lokkalt, en demandant un code chez le commerçant
 - gérer ma comptabilité (de mon/mes commerce•s)
   - rapport de vente
   - rapport de stock
@@ -228,7 +230,7 @@ D’autres fonctionnalités me viendront à l’esprit plus tard ou même les ut
 
 Le but de ce projet est de non seulement réaliser un PFE qui pose un challenge intéressant mais aussi d’être peut-être ma source de revenus principale pour plus tard en tant qu’indépendant.
 
-Ce qui veut dire que plusieurs points seront à prendre en charge assez rapidement, le plus gros étant la disponibilité du site. Dans le monde des commerçants, on y trouve vraiment de tout comme gestion du travail. Sur papier, téléphone, ordinateur, tablette ou même rien du tout. Il faut donc que Lokalt soit disponible sur tous les supports possibles.
+Ce qui veut dire que plusieurs points seront à prendre en charge assez rapidement, le plus gros étant la disponibilité du site. Dans le monde des commerçants, on y trouve vraiment de tout comme gestion du travail. Sur papier, téléphone, ordinateur, tablette ou même rien du tout. Il faut donc que Lokkalt soit disponible sur tous les supports possibles.
 
 ### Desktop/Bureau
 
